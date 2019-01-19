@@ -11,10 +11,14 @@
                 <div class="col-xs-10" [innerText] = "allowNewServer">  </div>
                         <div class="col-xs-9">
                            <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add New Server</button>
-                           <input type="text" class="form-control" (input)="onServerUpdateName($event)">  
+                           <!-- This is the old way of two way data binding -->
+                           <!-- <input type="text" class="form-control" (input)="onServerUpdateName($event)">   -->
+                           <!-- This is the new way of two way data binding -->
+                           <input type="text" class="form-control" [(ngModel)]="serverName">  
+                           <p>{{serverCreationStatus}}</p>
                         </div> 
-                        <p>{{serverCreationStatus}}</p>
-                        <p>{{serverName}}</p>
+                      
+                        <!-- <p>{{serverName}}</p> -->
 
         </div>
         <div class="col-xs-9"></div>

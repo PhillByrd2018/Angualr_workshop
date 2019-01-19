@@ -9,6 +9,7 @@ import { MessageComponent } from './message/message.component';
 import { MessagesComponent } from './messages/messages.component';
 import { WarningMessageComponent } from './message/warning-message/warning-message.component';
 import { SuccessMessageComponent } from './message/success-message/success-message.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SuccessMessageComponent } from './message/success-message/success-messa
     MessageComponent,
     MessagesComponent,
     WarningMessageComponent,
-    SuccessMessageComponent
+    SuccessMessageComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
