@@ -15,7 +15,13 @@
                            <!-- <input type="text" class="form-control" (input)="onServerUpdateName($event)">   -->
                            <!-- This is the new way of two way data binding -->
                            <input type="text" class="form-control" [(ngModel)]="serverName">  
-                           <p>{{serverCreationStatus}}</p>
+                           
+                           <!-- commented this out to make a conditional directive -->
+                           <!-- <p>{{serverCreationStatus}}</p> -->
+                                <p *ngIf="serverCreated; else noServer">Server was created. The server is {{serverName}}</p>
+                                <ng-template #noServer>
+                                <p> No server was created. Please try again.</p>
+                                </ng-template>
                         </div> 
                       
                         <!-- <p>{{serverName}}</p> -->
