@@ -11,6 +11,9 @@ import { WarningMessageComponent } from './message/warning-message/warning-messa
 import { SuccessMessageComponent } from './message/success-message/success-message.component';
 import { UserComponent } from './user/user.component';
 import { DetailsComponent } from './details/details.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './odd/odd.component';
+import { EvenComponent } from './even/even.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { DetailsComponent } from './details/details.component';
     WarningMessageComponent,
     SuccessMessageComponent,
     UserComponent,
-    DetailsComponent
+    DetailsComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,
