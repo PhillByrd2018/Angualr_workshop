@@ -9,6 +9,12 @@ export class AppComponent {
   oddNumbers: number[] = [];
   evenNumbers: number[] = [];
 
+  numbers = [1, 2, 3, 4, 5];
+  onlyOdd = false;
+  oddNumbersDirectives = [1, 3, 5];
+  evenNumbersDirectives =  [2, 4];
+
+
   onIntervalFired(firedNumber: number) {
     console.log(firedNumber);
 
