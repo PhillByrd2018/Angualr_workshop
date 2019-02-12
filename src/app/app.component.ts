@@ -13,6 +13,7 @@ export class AppComponent {
   onlyOdd = false;
   oddNumbersDirectives = [1, 3, 5];
   evenNumbersDirectives =  [2, 4];
+  customValue = 100;
 
 
   onIntervalFired(firedNumber: number) {

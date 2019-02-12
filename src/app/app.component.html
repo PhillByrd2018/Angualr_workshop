@@ -21,6 +21,13 @@
                             {{even}}
                             </li>
                         </div>
+                        <div *appUnless="onlyOdd">
+                            <li class="list-group-item"
+                            [ngClass]="{even : even % 2 === 0}"
+                            *ngFor="let even of evenNumbersDirectives">
+                            {{even}}
+                            </li>
+                        </div>
                         
                     </ul>
                     <!-- <ng-template [ngif]="onlyOdd">
@@ -29,9 +36,16 @@
                   
                 <hr>
                 <p appBasicHighlight>Style me with basic-Highlight Directive!</p>
-                <p appBetterHighlight>Style me with better-Highlight Directive!</p>
+                <p [appBetterHighlight]="'red'" [defaultColor]="'yellow'" >Style me with better-Highlight Directive!</p>
                 <hr>
                 <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+                <hr>
+               <div [ngSwitch]="customValue">
+                   <div *ngSwitchCase="5">value 5</div>
+                   <div *ngSwitchCase="10">value 10</div>
+                   <div *ngSwitchCase=100>value 100</div>
+                   <div *ngSwitchDefault>value is Default</div>
+               </div>
                 <hr>
                 <div class="row">
                     <div class="col-xs-12">
