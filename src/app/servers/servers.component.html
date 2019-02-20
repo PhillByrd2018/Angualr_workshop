@@ -1,0 +1,31 @@
+
+
+<app-server *ngFor="let server of servers"></app-server>
+
+
+
+
+<div class="container">
+        <div class="row">
+    
+                <div class="col-xs-10" [innerText] = "allowNewServer">  </div>
+                        <div class="col-xs-9">
+                           <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add New Server</button>
+                           <!-- This is the old way of two way data binding -->
+                           <!-- <input type="text" class="form-control" (input)="onServerUpdateName($event)">   -->
+                           <!-- This is the new way of two way data binding -->
+                           <input type="text" class="form-control" [(ngModel)]="serverName">  
+                           
+                           <!-- commented this out to make a conditional directive -->
+                           <!-- <p>{{serverCreationStatus}}</p> -->
+                                <p *ngIf="serverCreated; else noServer">Server was created. The server is {{serverName}}</p>
+                                <ng-template #noServer>
+                                <p> No server was created. Please try again.</p>
+                                </ng-template>
+                        </div> 
+                      
+                        <!-- <p>{{serverName}}</p> -->
+
+        </div>
+        <div class="col-xs-9"></div>
+</div>

@@ -1,0 +1,19 @@
+
+<div class="container">
+  <div class="row">
+
+          <div class="col-xs-10">This is the page that will let us make and store USER Data: <p>{{userMessage}}</p> </div>
+                  <div class="col-xs-9">
+  
+                     <input type="text" class="form-control" placeholder="Please enter a User Name Here" [(ngModel)]="userName"> 
+
+                     <button class="btn btn-primary" [disabled]="!allowNewUser" (click)="(onCreateUser(userName))">Add New User</button>
+                      <p>{{userCreationMessage}}</p>
+                     
+                  </div> 
+                
+                  <!-- <p>{{serverName}}</p> -->
+
+  </div>
+  <div class="col-xs-9"></div>
+</div>

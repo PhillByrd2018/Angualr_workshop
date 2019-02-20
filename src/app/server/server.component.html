@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-xs-5">
+        <h1>This is the server component!!!!</h1>
+        <p>The Server ID is: {{serverID}} with static variables</p>
+        <p [ngStyle]="{backgroundColor: getColor()}"
+           [ngClass]="{online: serverStatus === 'online'}"
+           >The Server is: {{serverStatus}} with static variables</p>
+        </div>
+
+        <div class="col-xs-5">
+            <h1>This is the server component!!!!</h1>
+            <p>The Server ID is: {{getServerID()}} with method variables</p>
+            <p [ngStyle]="{backgroundColor: getColor()}"
+               [ngClass]="{online: serverStatus === 'online'}"
+               >The Server is: {{getServerStatus()}} with method variables</p>
+
+        </div>
+    </div>
+</div>

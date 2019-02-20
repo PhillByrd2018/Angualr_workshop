@@ -1,0 +1,18 @@
+
+<div class="container">
+  <div class="row">
+      <div class="col-xs-6">
+        <h2>Here is the Banner for the detail section for Assignment #3</h2>
+        <button class="btn btn-danger" (click)="onShowDetails()">Toggle Details</button>
+        <br>
+        <p *ngIf="showDetails">This very special user data that you can toggle with the button above. PassWord = Tuna</p>
+        <hr>
+        <button class="btn btn-default" (click)="addToLog()">Add Log Details</button>
+        <br>
+        <div *ngFor="let logItem of log; let logIndex = index"
+        [ngStyle]="{backgroundColor: logIndex > 4 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text': logIndex > 4}"
+        >Log Item Number: {{logItem}}</div>
+      </div>
+    </div>
+</div>

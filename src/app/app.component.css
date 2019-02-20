@@ -1,0 +1,16 @@
+h1{
+    color:dodgerblue;
+}
+
+.container {
+    margin-top: 30px;
+
+}
+
+.odd {
+    color: red;
+}
+
+.even {
+    color: goldenrod;
+}
